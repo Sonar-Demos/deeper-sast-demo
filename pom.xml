@@ -81,7 +81,12 @@
             <artifactId>hutool-all</artifactId>
             <version>5.8.18</version>
         </dependency>
-    </dependencies>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.0.33</version>
+        </dependency>
+      </dependencies>
 
     <build>
         <plugins>

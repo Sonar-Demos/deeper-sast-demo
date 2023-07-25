@@ -7,6 +7,8 @@ import com.dashboardmanager.repository.SessionsRepository;
 import com.dashboardmanager.repository.UsersRepository;
 import com.dashboardmanager.utils.FileUtils;
 import com.dashboardmanager.utils.SessionHeader;
+import com.mysql.cj.jdbc.ConnectionImpl;
+import jakarta.persistence.EntityManager;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.apache.commons.lang.RandomStringUtils;
@@ -25,6 +27,10 @@ import org.springframework.web.servlet.view.RedirectView;
 
 import java.io.*;
 import java.security.SecureRandom;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Savepoint;
+import java.util.concurrent.atomic.AtomicReference;
 
 import static org.apache.commons.codec.binary.Base64.decodeBase64;
 
@@ -36,6 +42,9 @@ public class UserController {
 
     @Autowired
     private SessionsRepository sessionsRepository;
+
+    @Autowired
+    private EntityManager entityManager;
 
     private LRUFileCache fileCache = new LRUFileCache(100);
 
@@ -103,6 +112,42 @@ public class UserController {
         }
     }
 
+    @PostMapping("/user/migrate")
+    public ResponseEntity<Resource> migrateUser(@RequestParam(value = "username") String username) {
+        try (var connection = getConnection()) {
+            doMigrateUser(username, connection);
+            return ResponseEntity.status(HttpStatus.OK).build();
+        } catch (SQLException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+        }
+    }
+
+    private void doMigrateUser(String username, ConnectionImpl connection) throws SQLException {
+        // migration might fail midway, set a savepoint to keep the database consistent
+        Savepoint savepoint = connection.setSavepoint("before-" + username + "-migration");
+
+        User newUser = new User();
+        newUser.setName("_placeholder_" + username);
+        newUser.setPassword("_placeholder_");
+        usersRepository.save(newUser);
+
+        User user = usersRepository.findByName(username);
+        if (user == null) {
+            connection.rollback(savepoint);
+            return;
+        }
+
+        newUser.setName(user.getName());
+        newUser.setPassword("oldpw:" + user.getPassword());
+        usersRepository.save(newUser);
+    }
+
+    private ConnectionImpl getConnection() {
+        AtomicReference<ConnectionImpl> impl = new AtomicReference<>();
+        var session = entityManager.unwrap(org.hibernate.Session.class);
+        session.doWork(connection -> impl.set((ConnectionImpl) connection.unwrap(Connection.class)));
+        return impl.get();
+    }
 
     private String createSessionHeader(Session session) {
         SessionHeader sessionHeader = new SessionHeader(session.getUser().getName(), session.getSessionId());
