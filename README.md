@@ -55,7 +55,7 @@ This PR adds a new feature to import users from an XML file. Although the code i
 
 This repository is supposed to be added as a SonarCloud project for analysis via GitHub actions.
 
-* Fork this project *with all branches* (untick the default checkbox, "Copy the `main`` branch only").
+* Fork this project *with all branches* (untick the default checkbox, "Copy the `main` branch only").
 * Go to [sonarcloud.io](https://sonarcloud.io/sessions/new) and sign up with your GitHub account.
 * Create a new organization under your name if there is none.
 * Give SonarCloud permission to see the forked repository.
