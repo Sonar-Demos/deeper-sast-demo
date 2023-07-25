@@ -27,9 +27,9 @@ This vulnerability resides within the session cookie handling of the application
 
 * Vulnerability Type: Path Injection ([S2083](https://rules.sonarsource.com/java/RSPEC-2083/))
 * DeepSAST Dataflow:
-  * Source:  org.springframework.web.context.request.getRemoteUser
-  * Passthrough: org.apache.tomcat.util.buf.UDecoder.URLDecode
-  * Sink: cn.hutool.cache.file.LRUFileCache.getFileBytes
+  * Source:  `org.springframework.web.context.request.getRemoteUser`
+  * Passthrough: `org.apache.tomcat.util.buf.UDecoder.URLDecode`
+  * Sink: `cn.hutool.cache.file.LRUFileCache.getFileBytes`
 
 This vulnerability resides within the code responsible for retrieving user images. The library function `getRemoteUser` is used to retrieve the user-controllable username, which is passed through the `URLDecode` library function. The result is concatenated to a file path, which is passed to the `getFileBytes` library function introducing a path injection vulnerability.
 
@@ -38,7 +38,7 @@ This vulnerability resides within the code responsible for retrieving user image
 
 * Vulnerability Type: SQL Injection ([S3649](https://rules.sonarsource.com/java/RSPEC-3649/))
 * DeepSAST Dataflow:
-  * Sink: com.mysql.cj.jdbc.ConnectionImpl.setSavepoint
+  * Sink: `com.mysql.cj.jdbc.ConnectionImpl.setSavepoint`
 
 This PR adds a feature to migrate users from the existing H2 database to MySQL. Although the proposed change does not seem to contain any vulnerabilities, the `setSavepoint` library function is vulnerable to SQL injection if the passed argument is user-controllable. Thus this PR introduces a critical vulnerability due to the usage of the unsafe library function.
 
@@ -46,7 +46,7 @@ This PR adds a feature to migrate users from the existing H2 database to MySQL. 
 
 * Vulnerability Type: Deserialization ([S5135](https://rules.sonarsource.com/java/RSPEC-5135/))
 * DeepSAST Dataflow:
-  * Sink: ca.odell.glazedlists.impl.io.BeanXMLByteCoder.decode
+  * Sink: `ca.odell.glazedlists.impl.io.BeanXMLByteCoder.decode`
 
 This PR adds a new feature to import users from an XML file. Although the code itself does not seem to contain any vulnerabilities, the `decode` library function is vulnerable to deserialzation if the passed argument is user-controllable. Thus this PR introduces a critical vulnerability due to the usage of the unsafe library function.
 
