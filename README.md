@@ -56,6 +56,8 @@ This PR adds a new feature to import users from an XML file. Although the code i
 This repository is supposed to be added as a SonarCloud project for analysis via GitHub actions.
 
 * Fork this project *with all branches* (untick the default checkbox, "Copy the `main` branch only").
+* Go to the `Actions` tab of your forked repository and enable workflows by selecting `I understand my workflows, go ahead and enable them`.
+* Go to the `Pull requests` tab and create a new PR from the `introduce-user-migration-feature` and `allow-imports` branch to the `main` branch of your fork. Be careful that, by default, the PR targets the upstream repository.
 * Go to [sonarcloud.io](https://sonarcloud.io/sessions/new) and sign up with your GitHub account.
 * Create a new organization under your name if there is none.
 * Give SonarCloud permission to see the forked repository.
@@ -63,7 +65,7 @@ This repository is supposed to be added as a SonarCloud project for analysis via
 * Go to `Administration` -> `Analysis Method` and uncheck `Automatic Analysis`.
 * Select `Set up analysis via other methods` -> `With GitHub Actions`.
   * Add the displayed GitHub Secret to your repository.
-  * The `pom.xml` does not need to be adjusted.
-  * Update the `.github/workflows/build.yml` file in the main branch with the displayed content and ensure that the `java-version` is set to `17`.
+  * Update the `sonar.organization` value in the `pom.xml` file.
+  * Copy & paste the displayed content to `.github/workflows/build.yml` and set the `java-version` to `17`.
 
 The first two issues will be displayed on the `main` branch and the other two issues on distinct Pull Requests.
