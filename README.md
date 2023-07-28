@@ -2,7 +2,7 @@
 
 ## Storyboard
 
-The goal of this demo is to show the deeper SAST capabilities of the Java engine. We want to highlight that the usage of external libraries can introduce severe security vulnerabilities, which can be detected by Deep SAST.
+The goal of this demo is to show the deeper SAST capabilities of the Java engine. We want to highlight that the usage of external libraries can introduce severe security vulnerabilities, which can be detected by deeper SAST.
 
 The demo is a fictive Spring application implementing different functionalities which are vulnerable to security issues detected by our engine. All of these issues contain at least one step where the data flow:
 
