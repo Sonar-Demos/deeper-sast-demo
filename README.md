@@ -65,7 +65,8 @@ This repository is supposed to be added as a SonarCloud project for analysis via
 * Select `Set up analysis via other methods` -> `With GitHub Actions`.
   * Add the displayed GitHub Secret to your repository.
   * Update the `sonar.organization` value in the `pom.xml` file.
-  * Create a new file`.github/workflows/build.yml`, copy & paste the displayed content to it and set the `java-version` to `17`.
+  * Create a new file`.github/workflows/build.yml`, copy & paste the displayed content to it.
+  * Set the `java-version` in the `build.yml` file to `17`.
 * On your GitHub repository: Go to the `Pull requests` tab and create a new PR from the `introduce-user-migration-feature` and `allow-imports` branches to the `main` branch of your fork. Be careful that, by default, the PR targets the upstream repository.
 
 The first two issues will be displayed on the `main` branch and the other two issues on distinct Pull Requests.
