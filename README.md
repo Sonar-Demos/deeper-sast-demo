@@ -70,15 +70,3 @@ This repository is supposed to be added as a SonarCloud project for analysis via
 * On your GitHub repository: Go to the `Pull requests` tab and create a new PR from the `introduce-user-migration-feature` and `allow-imports` branches to the `main` branch of your fork. Be careful that, by default, the PR targets the upstream repository.
 
 The first two issues will be displayed on the `main` branch and the other two issues on distinct Pull Requests.
-
-## Real-World Examples
-
-This table contains examples of deeper SAST findings in real-world projects:
-
-| Link | Lang | Project | Issue type | Comment |
-| --- | --- | --- | --- | --- |
-| [SonarCloud](https://sonarcloud.io/project/issues?id=org.monarchinitiative.exomiser:exomiser&open=AYaYnkzfchh4gFFcKnDe) | Java | Small open-source | Log Injection | Dataflow with passthrough |
-| [SonarCloud](https://sonarcloud.io/project/issues?id=dmatej_glassfish&open=AYX94MJvhKb2vw3fmeKu) | Java | Eclipse Glassfish | Path Injection | Innocent looking sink |
-| [SonarCloud](https://sonarcloud.io/project/issues?id=siguser_benchmarkjava-gh&open=AYjEl06qrBlwzkIdugy7) | Java | OWASP Benchmark | SQL Injection | Rare sink, popular benchmark |
-| [SonarCloud](https://sonarcloud.io/project/issues?id=lightswitch05_zwave-js-ui&open=AYaUAEYH58jG26HSBsPN) | TS | Medium open-source | File Delete | Simple, critical issue in TS |
-| [SonarCloud](https://sonarcloud.io/project/issues?id=Visclo96_spring-boot&open=AYbbZ3D1FcQgtBJC0HXd) | Java | Spring Boot | Deserialize | Simple issue, popular project |
