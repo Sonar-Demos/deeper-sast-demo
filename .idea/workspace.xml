@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1156c8c-7cce-43c6-9c2d-6d7ca62d467a" name="Changes" comment="add build file">
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/88a9255124c95bdc913197c120a8d560edc59c8e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/8/88a9255124c95bdc913197c120a8d560edc59c8e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/dashboardmanager/DashboardManagerApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/dashboardmanager/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/dashboardmanager/model/Session.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/dashboardmanager/model/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/dashboardmanager/repository/SessionsRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/dashboardmanager/repository/UsersRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/dashboardmanager/utils/EncodingUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/dashboardmanager/utils/FileUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/dashboardmanager/utils/SessionHeader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f1156c8c-7cce-43c6-9c2d-6d7ca62d467a" name="Changes" comment="add build file" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +45,7 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/brusl_dvt/dev/sast-demo/deeper-sast-demo",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Confirmation"
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings"
   }
 }]]></component>
   <component name="RunManager">
