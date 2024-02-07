@@ -1,0 +1,9 @@
+com\dashboardmanager\model\Session.class
+com\dashboardmanager\utils\FileUtils.class
+com\dashboardmanager\controller\UserController.class
+com\dashboardmanager\repository\SessionsRepository.class
+com\dashboardmanager\repository\UsersRepository.class
+com\dashboardmanager\utils\SessionHeader.class
+com\dashboardmanager\utils\EncodingUtils.class
+com\dashboardmanager\DashboardManagerApplication.class
+com\dashboardmanager\model\User.class
