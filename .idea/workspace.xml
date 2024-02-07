@@ -4,9 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1156c8c-7cce-43c6-9c2d-6d7ca62d467a" name="Changes" comment="add maven">
+    <list default="true" id="f1156c8c-7cce-43c6-9c2d-6d7ca62d467a" name="Changes" comment="add build file">
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/88a9255124c95bdc913197c120a8d560edc59c8e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/8/88a9255124c95bdc913197c120a8d560edc59c8e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/dashboardmanager/DashboardManagerApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/dashboardmanager/controller/UserController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/dashboardmanager/model/Session.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/dashboardmanager/model/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/dashboardmanager/repository/SessionsRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/dashboardmanager/repository/UsersRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/dashboardmanager/utils/EncodingUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/dashboardmanager/utils/FileUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/dashboardmanager/utils/SessionHeader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +65,7 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/brusl_dvt/dev/sast-demo/deeper-sast-demo",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog"
+    "settings.editor.selected.configurable": "project.propVCSSupport.Confirmation"
   }
 }]]></component>
   <component name="RunManager">
@@ -77,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707117442565</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add build file">
+      <created>1707284733507</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707284733507</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,8 +131,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
     <MESSAGE value="add build.yml file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add build.yml file" />
+    <MESSAGE value="add build file" />
+    <option name="LAST_COMMIT_MESSAGE" value="add build file" />
   </component>
 </project>
