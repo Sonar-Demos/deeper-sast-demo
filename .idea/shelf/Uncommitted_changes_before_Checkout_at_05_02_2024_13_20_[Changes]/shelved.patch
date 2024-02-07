@@ -1,0 +1,19 @@
+Index: .github/workflows/build.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>name: Build\n\non:\n  push:\n    branches:\n      - main\n  pull_request:\n    types: [opened, synchronize, reopened]\n\njobs:\n  build:\n    name: Build\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v2\n        with:\n          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis\n      - name: Set up JDK 11\n        uses: actions/setup-java@v1\n        with:\n          java-version: 11\n      - name: Cache SonarQube packages\n        uses: actions/cache@v1\n        with:\n          path: ~/.sonar/cache\n          key: ${{ runner.os }}-sonar\n          restore-keys: ${{ runner.os }}-sonar\n      - name: Cache Maven packages\n        uses: actions/cache@v1\n        with:\n          path: ~/.m2\n          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}\n          restore-keys: ${{ runner.os }}-m2\n      - name: Build and analyze\n        env:\n          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any\n          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}\n          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}\n        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=gehtsoft-usa_deeper-sast-demo_AY14AqsQcXqd9qGs23kB -Dsonar.projectName='deeper-sast-demo'\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.github/workflows/build.yml b/.github/workflows/build.yml
+--- a/.github/workflows/build.yml	(revision a6b99ecb02edf7de0e0dc36156d5fda931cf4dfe)
++++ b/.github/workflows/build.yml	(date 1707117574897)
+@@ -18,7 +18,7 @@
+       - name: Set up JDK 11
+         uses: actions/setup-java@v1
+         with:
+-          java-version: 11
++          java-version: 17
+       - name: Cache SonarQube packages
+         uses: actions/cache@v1
+         with:
