@@ -34,4 +34,4 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-          run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=gehtsoft-usa_deeper-sast-demo_AY14AqsQcXqd9qGs23kB -Dsonar.projectName='deeper-sast-demo'
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=gehtsoft-usa_deeper-sast-demo_AY14AqsQcXqd9qGs23kB -Dsonar.projectName='deeper-sast-demo'
